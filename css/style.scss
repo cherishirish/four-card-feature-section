@@ -1,0 +1,199 @@
+
+$font: 'Poppins', sans-serif;
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+$VDBlue: hsl(234, 12%, 34%);
+$GBlue:  hsl(229, 6%, 66%);
+$VLGray: hsl(0, 0%, 98%);
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: $font;
+    color: $VDBlue;
+    background-color:$VLGray;
+    
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 314px;
+    margin:auto;
+    margin-top: 100px;
+}
+
+@media screen and (min-width: 995px) {
+    .wrapper {
+        
+        
+        margin-top: 100px;  
+        width: 70%;
+        margin: 0 auto;
+    }
+
+} 
+ 
+
+
+
+/////////HEADER
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 600;
+        font-size: 25.5px;
+        text-align: justify;
+        text-justify: inter-word;
+        margin-bottom: 20px;
+       
+    }
+    &__title::first-line {
+        font-weight: 200;
+    }
+
+    &__subtitle {
+        width: 95%;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+@media screen and (min-width: 995px) {
+
+
+
+        .header {
+        
+            margin-top: 100px;
+            width: 500px;
+
+         &__title {
+                font-size: 30px;
+            }
+        }
+
+}
+
+
+
+
+////////CONTENT
+
+.content {
+    
+    
+    &__box {
+    width: 290px;
+    background-color: white;
+    border-radius: 7px;
+    padding: 25px;
+    margin-bottom: 15px; 
+    
+    -webkit-box-shadow: 0px 12px 32px -9px rgba(0,0,0,0.62);
+    -moz-box-shadow: 0px 12px 32px -9px rgba(0,0,0,0.62);
+    box-shadow: 0px 12px 32px -9px rgba(0,0,0,0.62);
+
+    }
+    &__box--title {
+        margin-bottom: 5px;
+        font-weight: 700;
+        font-size: 17px;
+    }
+    &__box--copy {
+        line-height: 25px;
+        font-size: 14px;
+        margin-bottom: 50px;
+    }
+    &__box--icon {
+        text-align: right;
+        width: 100%;
+        display: block;
+      }
+
+    &__box--img{
+        width: 50px;
+    }
+    
+
+    &__box--supervisor {
+        border-top: 5px solid $cyan;
+    }
+    &__box--teambuilder {
+        border-top: 5px solid $red;
+    }
+    &__box--karma {
+        border-top: 5px solid $orange;
+    }
+    &__box--calculator {
+        border-top: 5px solid $blue;
+    }
+    
+}
+
+
+@media screen and (min-width: 995px) {
+
+    .content {
+        margin-top: -100px;       
+
+        &__box {
+            width: 290px;
+        }
+
+        &__box--copy {
+            margin-bottom: 50px;
+        }
+    
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0px 20px;
+        grid-template-areas: ". teambuilder ." "supervisor . calculator" ". karma .";
+
+
+        &__box--supervisor {
+            grid-area: supervisor;
+         }
+         &__box--teambuilder {
+            position: relative;
+            top: 130px;
+            grid-area: teambuilder;
+         }
+         &__box--karma {
+            position: relative;
+            top: -120px;
+            grid-area: karma;
+         }
+         &__box--calculator {
+            grid-area: calculator;
+         }
+
+    }
+}
+    
+
+
+
+    
+      
+

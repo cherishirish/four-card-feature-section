@@ -1,0 +1,176 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #4c4e61;
+  background-color: #fafafa;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 314px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 995px) {
+  .wrapper {
+    margin-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header__title {
+  font-weight: 600;
+  font-size: 25.5px;
+  text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 20px;
+}
+
+.header__title::first-line {
+  font-weight: 200;
+}
+
+.header__subtitle {
+  width: 95%;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 995px) {
+  .header {
+    margin-top: 100px;
+    width: 500px;
+  }
+  .header__title {
+    font-size: 30px;
+  }
+}
+
+.content__box {
+  width: 290px;
+  background-color: white;
+  border-radius: 7px;
+  padding: 25px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 12px 32px -9px rgba(0, 0, 0, 0.62);
+  box-shadow: 0px 12px 32px -9px rgba(0, 0, 0, 0.62);
+}
+
+.content__box--title {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.content__box--copy {
+  line-height: 25px;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+.content__box--icon {
+  text-align: right;
+  width: 100%;
+  display: block;
+}
+
+.content__box--img {
+  width: 50px;
+}
+
+.content__box--supervisor {
+  border-top: 5px solid #45d3d3;
+}
+
+.content__box--teambuilder {
+  border-top: 5px solid #ea5353;
+}
+
+.content__box--karma {
+  border-top: 5px solid #fcaf4a;
+}
+
+.content__box--calculator {
+  border-top: 5px solid #549ef2;
+}
+
+@media screen and (min-width: 995px) {
+  .content {
+    margin-top: -100px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 20px;
+        grid-template-areas: ". teambuilder ." "supervisor . calculator" ". karma .";
+  }
+  .content__box {
+    width: 290px;
+  }
+  .content__box--copy {
+    margin-bottom: 50px;
+  }
+  .content__box--supervisor {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: supervisor;
+  }
+  .content__box--teambuilder {
+    position: relative;
+    top: 130px;
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: teambuilder;
+  }
+  .content__box--karma {
+    position: relative;
+    top: -120px;
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: karma;
+  }
+  .content__box--calculator {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    grid-area: calculator;
+  }
+}
+/*# sourceMappingURL=style.css.map */
